@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: There isn't any kind of test in this project\" && exit 1",
-    "start": "node server.js"
+    "start": "node src/server.js"
   },
   "author": "leandrocapuano@gmail.com",
   "license": "MIT",
