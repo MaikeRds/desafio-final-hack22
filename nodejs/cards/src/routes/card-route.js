@@ -9,6 +9,9 @@ module.exports = (app) => {
     app.route('/cards')
         .post(controller.create);
 
+    app.route('/cards/paginationAndSorting')
+        .get(controller.paginationAndSorting);
+
     app.route('/cards/:id')
         .put(controller.updateById);
     
@@ -18,7 +21,5 @@ module.exports = (app) => {
     app.route('/cards/:id')
         .get(controller.findById);
     
-    app.route('/cards/paginationAndSorting')
-        .get(() => {});
-
+  
 }

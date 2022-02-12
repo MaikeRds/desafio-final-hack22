@@ -49,4 +49,16 @@ controller.findById = async (req, res) => {
     return res.status(200).json(card);
 };
 
+controller.paginationAndSorting = async (req, res) => {
+    console.log(req.query)
+
+    const sorts = req.query.sorts
+    const skip =  req.query.skip
+    const limit =  req.query.limit
+
+    const cards = await service.paginationAndSorting(sorts, skip, limit);
+
+    return res.status(200).json(cards);
+}
+
 module.exports = controller;

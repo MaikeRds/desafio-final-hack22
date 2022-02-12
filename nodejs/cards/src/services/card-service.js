@@ -32,4 +32,8 @@ service.deleteById = async (id) => {
     return await cardRepository.deleteById(id);   
 }
 
+service.paginationAndSorting = async (sorts, skip, limit) => {
+    return await cardRepository.paginationAndSorting(sorts, skip, limit);   
+}
+
 module.exports = service;
