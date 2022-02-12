@@ -28,4 +28,8 @@ service.updateById = async (id, card) => {
     return await cardRepository.updateById(id, card);   
 }
 
+service.deleteById = async (id) => {
+    return await cardRepository.deleteById(id);   
+}
+
 module.exports = service;

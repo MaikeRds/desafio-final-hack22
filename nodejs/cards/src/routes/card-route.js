@@ -13,10 +13,10 @@ module.exports = (app) => {
         .put(controller.updateById);
     
     app.route('/cards/:id')
-        .delete(() => {});
+        .delete(controller.deleteById);
 
     app.route('/cards/:id')
-        .get(() => {});
+        .get(controller.findById);
     
     app.route('/cards/paginationAndSorting')
         .get(() => {});

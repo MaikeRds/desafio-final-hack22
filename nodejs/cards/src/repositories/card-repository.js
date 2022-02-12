@@ -34,6 +34,14 @@ repository.updateById = (id, card) => {
     });
 };
 
+repository.deleteById = (id) => {
+    return new Promise((resolve, reject) => {
+        db.remove({ _id: id }, { },  (err, numRemoved)  => {  
+            err ? reject(err) : resolve(numRemoved);
+        });
+    });
+};
+
 
 
 module.exports = repository;
